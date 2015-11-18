@@ -10,7 +10,7 @@ class Experiment(object):
 
 
 def as_experiment(experiment_callable):
-    return type(u"AdHocExperiment", (Experiment,), {u"perform": lambda self: experiment_callable()})()
+    return type("AdHocExperiment", (Experiment,), {"perform": lambda self: experiment_callable()})()
 
 
 def transpose_list_of_dict(repetitions):
@@ -53,7 +53,7 @@ class AverageAndStdCombiner(KeyWiseRepetitionsCombiner):
 
 
 def as_combiner(experiment_callable):
-    return type(u"AdHocRepetitionsCombiner", (RepetitionsCombiner,), {u"combine": lambda self: experiment_callable()})()
+    return type("AdHocRepetitionsCombiner", (RepetitionsCombiner,), {"combine": lambda self: experiment_callable()})()
 
 
 def repeat_experiment(experiment, repetitions = 5):
