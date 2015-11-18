@@ -1,5 +1,4 @@
 from __future__ import absolute_import
-from typing import Callable, List, Dict, Tuple
 import numpy as np
 from itertools import izip
 
